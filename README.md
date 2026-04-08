@@ -1,30 +1,40 @@
-# chatbot-ui
+# Chatbot UI
 
-`chatbot-ui` is a Next.js web application for multi-provider AI chat with Supabase-backed data storage.
+A polished multi-provider AI workspace for people who want one chat interface without being locked into one model, one vendor, or one workflow.
 
-## Overview
+## Why This Project Exists
 
-The project provides a browser-based chat experience, local database workflows, and a modular codebase for UI, prompts, providers, and persistence.
+`chatbot-ui` is built for people who treat AI like a daily operating system, not a novelty tab. It brings together chat, files, prompts, database-backed history, provider flexibility, and a modern Next.js interface into one place.
+
+## What It Does
+
+- supports multiple model providers from a single chat surface
+- stores chat data and app state with Supabase
+- includes reusable chat UI, prompt handling, and provider helpers
+- supports local development with typed database workflows
 
 ## Project Structure
 
 ```text
 chatbot-ui/
-|-- app/
-|-- components/
-|-- context/
-|-- db/
-|-- lib/
-|-- supabase/
+|-- app/                  # Next.js app routes, layouts, and pages
+|-- components/           # reusable chat, settings, and interface components
+|-- context/              # shared client state
+|-- db/                   # database-facing logic
+|-- lib/                  # providers, helpers, prompts, and utilities
+|-- supabase/             # migrations and generated types
 |-- package.json
 `-- README.md
 ```
 
-## Requirements
+## Tech Stack
 
-- Node.js 18+
-- npm
-- Supabase CLI for local database workflows
+- Next.js
+- React
+- TypeScript
+- Supabase
+- Tailwind CSS
+- Jest
 
 ## Installation
 
@@ -33,15 +43,15 @@ npm install
 copy .env.local.example .env.local
 ```
 
-## Running The Project
+## Run Locally
 
-Start the Next.js app:
+Start the app:
 
 ```bash
 npm run dev
 ```
 
-Start the local Supabase stack and app together:
+Run the app with the local Supabase workflow:
 
 ```bash
 npm run chat
@@ -56,16 +66,12 @@ npm run start
 
 ## How It Works
 
-- `app/` contains routes, layouts, and page entry points.
-- `components/` contains reusable chat and settings UI.
-- `context/` manages shared client-side state.
-- `db/` and `supabase/` support database access, migrations, and generated types.
-- `lib/` contains provider integrations, helpers, and business logic.
+- `app/` defines the application shell and route-level behavior.
+- `components/` drives the interactive chat experience and settings UX.
+- `context/` keeps client-side state synchronized across the interface.
+- `db/` and `supabase/` provide persistence, migrations, and typed database access.
+- `lib/` holds the provider-specific and product-specific logic that makes the chat experience extensible.
 
-## Useful Commands
+## Who This Is For
 
-- `npm run dev`
-- `npm run chat`
-- `npm run build`
-- `npm run start`
-- `npm run test`
+This project fits makers, researchers, and power users who want an extensible chat interface they can run, customize, and evolve instead of relying on a fixed hosted product.
